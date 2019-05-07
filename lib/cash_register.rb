@@ -8,8 +8,14 @@ def initialize(discount = 0)
   @items = []
 end
 
-def add_item(title, price, item_quantity = 1)
-
-end
+def add_item(title, price, quantity = 1)
+    @total += price * quantity
+    @transactions << price
+    i = quantity
+    until i == 0 do
+      @items << title
+      i -= 1
+    end
+  end
 
 end
